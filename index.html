@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mis XV Años · Nicole Marissa</title>
+<meta name="description" content="Invitación a los XV años de Nicole Marissa — Sábado 19 de septiembre, 2026.">
+<meta name="theme-color" content="#F5EFE5">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Adornos laterales decorativos (ramas de rosas) -->
+<div class="side-decor side-decor--left" aria-hidden="true"></div>
+<div class="side-decor side-decor--right" aria-hidden="true"></div>
+
+<!-- ============================================================
+     PANTALLA DE APERTURA — invitación doblada
+============================================================ -->
+<div id="opening" class="opening" aria-hidden="false">
+  <div class="opening__field">
+
+    <p class="opening__kicker">Tienes una invitación</p>
+
+    <button type="button" id="card" class="card" aria-label="Toca para abrir la invitación">
+      <span class="card__edge"></span>
+
+      <span class="card__flap" aria-hidden="true">
+        <span class="card__flap-ornament"></span>
+      </span>
+
+      <span class="card__face">
+        <span class="card__monogram">N&nbsp;·&nbsp;M</span>
+        <span class="card__rule"></span>
+        <span class="card__label">Mis XV Años</span>
+        <span class="card__name">Nicole&nbsp;Marissa</span>
+      </span>
+    </button>
+
+    <p class="opening__cta">
+      <span class="opening__cta-text">Toca para abrir</span>
+      <span class="opening__cta-dot" aria-hidden="true"></span>
+    </p>
+  </div>
+</div>
+
+<!-- ============================================================
+     CONTENIDO PRINCIPAL
+============================================================ -->
+<main id="content" class="content" aria-hidden="true">
+
+  <!-- Botón flotante de música -->
+  <button type="button" id="music-toggle" class="music-toggle" aria-pressed="false" aria-label="Activar música">
+    <span class="music-toggle__bars" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </span>
+  </button>
+
+  <!-- ============ PANTALLA 2 — HERO ============ -->
+  <section class="section hero" data-reveal>
+    <p class="eyebrow">Mis XV Años</p>
+    <h1 class="hero__name">Nicole<br>Marissa</h1>
+    <span class="ornament ornament--rule" aria-hidden="true"></span>
+    <p class="hero__quote">
+      Hay momentos en la vida que representan un antes y un después, el comienzo
+      y el fin de una etapa, y lo que los hace realmente especiales son las
+      personas con las que se comparten. Quiero que tú seas parte de ella.
+      Hoy mi sueño se hace realidad.
+    </p>
+  </section>
+
+  <!-- ============ PANTALLA 3 — FECHA / HORA / LUGAR ============ -->
+  <section class="section date-section" data-reveal>
+    <p class="eyebrow">Tengo el honor de invitarles a celebrar<br>mi día soñado el</p>
+
+    <div class="date-block">
+      <span class="date-block__day">Sábado 19</span>
+      <span class="date-block__month">Septiembre</span>
+      <span class="date-block__time">16:00 hrs.</span>
+    </div>
+
+    <span class="ornament ornament--dot" aria-hidden="true"></span>
+
+    <div class="venue">
+      <p class="venue__name">Salón de Eventos<br>“Valparaíso”</p>
+      <p class="venue__address">
+        Zona Villa Bolívar “F”, calle 136 esq. 25 de Julio<br>
+        Carretera a Viacha
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ PANTALLA 4 — CUENTA REGRESIVA ============ -->
+  <section class="section countdown-section" data-reveal>
+    <p class="eyebrow">Faltan</p>
+
+    <div id="countdown" class="countdown">
+      <div class="countdown__unit">
+        <span class="countdown__value" id="cd-days">00</span>
+        <span class="countdown__label">Días</span>
+      </div>
+      <div class="countdown__unit">
+        <span class="countdown__value" id="cd-hours">00</span>
+        <span class="countdown__label">Horas</span>
+      </div>
+      <div class="countdown__unit">
+        <span class="countdown__value" id="cd-minutes">00</span>
+        <span class="countdown__label">Minutos</span>
+      </div>
+      <div class="countdown__unit">
+        <span class="countdown__value" id="cd-seconds">00</span>
+        <span class="countdown__label">Segundos</span>
+      </div>
+    </div>
+
+    <p id="countdown-arrived" class="countdown-arrived" hidden>¡Hoy es el gran día!</p>
+  </section>
+
+  <!-- ============ PANTALLA 5 — PADRES ============ -->
+  <section class="section people-section" data-reveal>
+    <span class="ornament ornament--rule ornament--short" aria-hidden="true"></span>
+    <p class="eyebrow">Con la bendición de mis padres</p>
+    <p class="people__name">Victor Ediño Mamani Burgoa</p>
+    <p class="people__name">Claudia Marisol Copa Aguilar</p>
+  </section>
+
+  <!-- ============ PANTALLA 6 — PADRINOS ============ -->
+  <section class="section people-section people-section--alt" data-reveal>
+    <span class="ornament ornament--rule ornament--short" aria-hidden="true"></span>
+    <p class="eyebrow">Padrinos de 15 años</p>
+    <p class="people__name">Erich Percy Mamani Burgoa</p>
+    <p class="people__name">Celinia Stephany Mamani Machaca</p>
+  </section>
+
+  <!-- ============ PANTALLA 7 — CÓDIGO DE VESTIMENTA ============ -->
+  <section class="section dresscode-section" data-reveal>
+    <p class="eyebrow">Código de vestimenta</p>
+
+    <div class="dresscode">
+      <div class="dresscode__item">
+        <svg class="dresscode__icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M18 6 L24 12 L30 6 L34 10 L28 16 L28 42 L20 42 L20 16 L14 10 Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+        </svg>
+        <span class="dresscode__role">Damas</span>
+        <span class="dresscode__desc">Vestido coctel</span>
+      </div>
+
+      <span class="dresscode__divider" aria-hidden="true"></span>
+
+      <div class="dresscode__item">
+        <svg class="dresscode__icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M16 8 L24 14 L32 8 L37 14 L31 19 L31 42 L17 42 L17 19 L11 14 Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+          <path d="M24 14 L21 22 L24 20 L27 22 Z" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/>
+        </svg>
+        <span class="dresscode__role">Caballeros</span>
+        <span class="dresscode__desc">Traje formal</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PANTALLA 8 — UBICACIÓN ============ -->
+  <section class="section location-section" data-reveal>
+    <p class="eyebrow">Los esperamos en</p>
+    <p class="venue__name">Salón de Eventos<br>“Valparaíso”</p>
+    <p class="venue__address">
+      Zona Villa Bolívar “F”, calle 136 esq. 25 de Julio<br>
+      Carretera a Viacha
+    </p>
+
+    <div class="location-actions">
+      <a id="btn-view-location" class="btn btn--outline" href="#" target="_blank" rel="noopener">Ver ubicación</a>
+      <a id="btn-go-event" class="btn btn--solid" href="#" target="_blank" rel="noopener">Ir al evento</a>
+    </div>
+  </section>
+
+  <!-- ============ PANTALLA 9 — MENSAJE FINAL ============ -->
+  <footer class="section final-section" data-reveal>
+    <span class="ornament ornament--rule ornament--short" aria-hidden="true"></span>
+    <p class="final__waiting">Te esperamos&hellip;</p>
+    <p class="final__name">Nicole Marissa</p>
+    <p class="final__event">Mis XV Años</p>
+    <p class="final__place">El Alto, Septiembre de 2026</p>
+  </footer>
+
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>
