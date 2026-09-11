@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Nicole Marissa · Mis XV Años</title>
+<meta name="description" content="Invitación digital — Mis XV Años, Nicole Marissa. Sábado 19 de septiembre de 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cinzel:wght@400;500;600&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= CAPA DE FONDO GLOBAL ================= -->
+<div class="world-bg" aria-hidden="true">
+  <div class="world-bg__gradient"></div>
+  <svg class="world-bg__vines" viewBox="0 0 1200 3000" preserveAspectRatio="xMidYMin slice" aria-hidden="true">
+    <path class="vine" d="M -20,120 C 60,220 20,340 90,420 C 160,500 120,600 60,700" />
+    <path class="vine" d="M 1220,900 C 1140,980 1180,1080 1110,1160 C 1040,1240 1080,1340 1020,1420" />
+    <path class="vine" d="M -20,1700 C 60,1800 20,1920 90,2000" />
+    <path class="vine" d="M 1220,2300 C 1140,2380 1180,2480 1110,2560" />
+  </svg>
+  <div class="world-bg__sparkles" id="sparkles"></div>
+</div>
+
+<!-- ================= BOTÓN DE MÚSICA ================= -->
+<button id="musicToggle" class="music-toggle" aria-label="Reproducir música" aria-pressed="false">
+  <span class="music-toggle__icon">♪</span>
+</button>
+
+<!-- ================= 1. PANTALLA DE APERTURA ================= -->
+<section id="gate" class="gate">
+  <div class="gate__scene">
+    <div class="gate__deco gate__deco--card gate__deco--card1" aria-hidden="true">
+      <svg viewBox="0 0 60 84"><use href="#icon-card"/></svg>
+    </div>
+    <div class="gate__deco gate__deco--card gate__deco--card2" aria-hidden="true">
+      <svg viewBox="0 0 60 84"><use href="#icon-card"/></svg>
+    </div>
+    <div class="gate__deco gate__deco--key" aria-hidden="true">
+      <svg viewBox="0 0 60 100"><use href="#icon-key"/></svg>
+    </div>
+    <div class="gate__deco gate__deco--clock" aria-hidden="true">
+      <svg viewBox="0 0 100 100"><use href="#icon-clock"/></svg>
+    </div>
+    <div class="gate__deco gate__deco--rose gate__deco--rose1" aria-hidden="true">
+      <svg viewBox="0 0 60 60"><use href="#icon-rose"/></svg>
+    </div>
+    <div class="gate__deco gate__deco--rose gate__deco--rose2" aria-hidden="true">
+      <svg viewBox="0 0 60 60"><use href="#icon-rose"/></svg>
+    </div>
+
+    <div class="invitation" id="invitation">
+      <div class="invitation__shadow"></div>
+      <div class="invitation__panel invitation__panel--left"></div>
+      <div class="invitation__panel invitation__panel--right"></div>
+      <div class="invitation__seal">
+        <svg viewBox="0 0 90 90" aria-hidden="true"><use href="#icon-seal"/></svg>
+      </div>
+      <div class="invitation__base">
+        <p class="invitation__eyebrow">Mis XV Años</p>
+        <p class="invitation__name">Nicole&nbsp;Marissa</p>
+      </div>
+    </div>
+
+    <button id="openBtn" class="gate__cta" type="button">
+      <span>Toca para abrir</span>
+    </button>
+  </div>
+</section>
+
+<!-- ================= CONTENEDOR PRINCIPAL (oculto hasta abrir) ================= -->
+<main id="world" class="world" hidden>
+
+  <!-- 2. NOMBRE / MUNDO DE MARAVILLAS -->
+  <section class="scene scene--name" data-scene>
+    <div class="scene__silhouette scene__silhouette--rabbit" aria-hidden="true">
+      <svg viewBox="0 0 120 160"><use href="#icon-rabbit"/></svg>
+    </div>
+    <div class="ornament ornament--branch-tl" aria-hidden="true"><svg viewBox="0 0 200 200"><use href="#icon-branch"/></svg></div>
+    <div class="scene__content">
+      <p class="reveal kicker">Mis XV Años</p>
+      <h1 class="reveal display-name">Nicole<br>Marissa</h1>
+      <div class="name-ornament reveal" aria-hidden="true">
+        <svg viewBox="0 0 240 40"><use href="#icon-flourish"/></svg>
+      </div>
+    </div>
+    <div class="scene__hearts" aria-hidden="true">
+      <svg viewBox="0 0 40 36" class="float-heart fh1"><use href="#icon-heart"/></svg>
+      <svg viewBox="0 0 40 36" class="float-heart fh2"><use href="#icon-heart"/></svg>
+    </div>
+  </section>
+
+  <!-- 3. FRASE -->
+  <section class="scene scene--phrase" data-scene>
+    <div class="phrase-frame reveal">
+      <svg class="phrase-frame__key" viewBox="0 0 60 100" aria-hidden="true"><use href="#icon-key"/></svg>
+      <p class="phrase-text">Hay momentos en la vida que representan un antes y un después, el comienzo y el fin de una etapa &mdash; y lo que los hace realmente especiales son las personas con las que se comparten.</p>
+      <p class="phrase-text phrase-text--emph">Quiero que tú seas parte de ella.<br>Hoy mi sueño se hace realidad.</p>
+      <svg class="phrase-frame__card" viewBox="0 0 60 84" aria-hidden="true"><use href="#icon-card"/></svg>
+    </div>
+  </section>
+
+  <!-- 4. FECHA -->
+  <section class="scene scene--date" data-scene>
+    <div class="ornament ornament--card-br" aria-hidden="true"><svg viewBox="0 0 60 84"><use href="#icon-card"/></svg></div>
+    <div class="date-block reveal">
+      <p class="date-block__day">Sábado</p>
+      <p class="date-block__number">19</p>
+      <p class="date-block__month">Septiembre</p>
+      <div class="date-block__rule" aria-hidden="true"></div>
+      <p class="date-block__time">16:00 hrs.</p>
+    </div>
+    <svg class="scene__hearts-corner" viewBox="0 0 40 36" aria-hidden="true"><use href="#icon-heart"/></svg>
+  </section>
+
+  <!-- 5. CONTADOR -->
+  <section class="scene scene--countdown" data-scene>
+    <p class="reveal kicker kicker--light">Faltan</p>
+    <div id="countdown" class="countdown reveal" role="timer" aria-live="off">
+      <div class="countdown__unit">
+        <div class="countdown__plate"><span id="cd-days">00</span></div>
+        <span class="countdown__label">Días</span>
+      </div>
+      <div class="countdown__unit">
+        <div class="countdown__plate"><span id="cd-hours">00</span></div>
+        <span class="countdown__label">Horas</span>
+      </div>
+      <div class="countdown__unit">
+        <div class="countdown__plate"><span id="cd-minutes">00</span></div>
+        <span class="countdown__label">Minutos</span>
+      </div>
+      <div class="countdown__unit">
+        <div class="countdown__plate"><span id="cd-seconds">00</span></div>
+        <span class="countdown__label">Segundos</span>
+      </div>
+    </div>
+    <p id="cd-today" class="cd-today" hidden>¡Hoy es el gran día!</p>
+
+    <!-- 6. CALENDARIO -->
+    <div class="calendar reveal" aria-label="Calendario de septiembre 2026, día 19 marcado">
+      <div class="calendar__header">
+        <span class="calendar__month">Septiembre</span>
+        <span class="calendar__year">2026</span>
+      </div>
+      <div class="calendar__grid" id="calendarGrid"><!-- generado por JS --></div>
+      <p class="calendar__caption">Sábado 19 — el día soñado</p>
+    </div>
+  </section>
+
+  <!-- 7. PADRES -->
+  <section class="scene scene--parents" data-scene>
+    <div class="parchment reveal">
+      <svg class="parchment__key" viewBox="0 0 60 100" aria-hidden="true"><use href="#icon-key"/></svg>
+      <p class="parchment__title">Con la bendición de mis padres</p>
+      <p class="parchment__names">
+        Victor Ediño Mamani Burgoa<br>
+        <span class="parchment__amp">&amp;</span><br>
+        Claudia Marisol Copa Aguilar
+      </p>
+    </div>
+  </section>
+
+  <!-- 8. PADRINOS -->
+  <section class="scene scene--godparents" data-scene>
+    <div class="parchment parchment--alt reveal">
+      <svg class="parchment__card" viewBox="0 0 60 84" aria-hidden="true"><use href="#icon-card"/></svg>
+      <p class="parchment__title">Padrinos de 15 Años</p>
+      <p class="parchment__names">
+        Erich Percy Mamani Burgoa<br>
+        <span class="parchment__amp">&amp;</span><br>
+        Celinia Stephany Mamani Machaca
+      </p>
+    </div>
+  </section>
+
+  <!-- 9. VESTIMENTA -->
+  <section class="scene scene--dresscode" data-scene>
+    <p class="reveal kicker">Código de vestimenta</p>
+    <div class="dresscode reveal">
+      <div class="dresscode__item">
+        <svg viewBox="0 0 80 100" aria-hidden="true"><use href="#icon-dress"/></svg>
+        <p class="dresscode__label">Damas</p>
+        <p class="dresscode__value">Vestido Coctel</p>
+      </div>
+      <div class="dresscode__divider" aria-hidden="true"></div>
+      <div class="dresscode__item">
+        <svg viewBox="0 0 80 100" aria-hidden="true"><use href="#icon-suit"/></svg>
+        <p class="dresscode__label">Caballeros</p>
+        <p class="dresscode__value">Traje Formal</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. FOTOGRAFÍAS -->
+  <section class="scene scene--photos" data-scene>
+    <p class="reveal kicker">Un pequeño cuento de Nicole</p>
+    <div class="photos reveal">
+      <button class="photo photo--main" data-photo="assets/images/photo1.jpeg" type="button">
+        <img src="assets/images/photo1.jpeg" alt="Fotografía principal de Nicole Marissa" loading="lazy">
+        <svg class="photo__deco" viewBox="0 0 40 36" aria-hidden="true"><use href="#icon-heart"/></svg>
+      </button>
+      <div class="photos__side">
+        <button class="photo photo--side" data-photo="assets/images/photo2.jpeg" type="button">
+          <img src="assets/images/photo2.jpeg" alt="Fotografía de Nicole Marissa" loading="lazy">
+        </button>
+        <button class="photo photo--side" data-photo="assets/images/photo3.jpeg" type="button">
+          <img src="assets/images/photo3.jpeg" alt="Fotografía de Nicole Marissa" loading="lazy">
+          <svg class="photo__deco photo__deco--card" viewBox="0 0 60 84" aria-hidden="true"><use href="#icon-card"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visor de fotografía ampliada -->
+  <div id="photoViewer" class="photo-viewer" hidden>
+    <button id="photoViewerClose" class="photo-viewer__close" aria-label="Cerrar fotografía" type="button">&times;</button>
+    <img id="photoViewerImg" src="" alt="">
+  </div>
+
+  <!-- 11. UBICACIÓN -->
+  <section class="scene scene--location" data-scene>
+    <div class="ornament ornament--door" aria-hidden="true"><svg viewBox="0 0 100 160"><use href="#icon-door"/></svg></div>
+    <p class="reveal kicker">El camino hacia la celebración</p>
+    <div class="location reveal">
+      <p class="location__venue">Salón de Eventos<br><span>&ldquo;Valparaíso&rdquo;</span></p>
+      <p class="location__address">
+        Zona Villa Bolívar &ldquo;F&rdquo;<br>
+        Calle 136 esq. 25 de Julio<br>
+        Carretera a Viacha
+      </p>
+      <div class="location__buttons">
+        <a id="btnViewLocation" class="btn btn--ghost" href="#" target="_blank" rel="noopener">Ver ubicación</a>
+        <a id="btnGoLocation" class="btn btn--solid" href="#" target="_blank" rel="noopener">Ir al evento</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. FINAL -->
+  <section class="scene scene--final" data-scene>
+    <div class="scene__silhouette scene__silhouette--alice" aria-hidden="true">
+      <svg viewBox="0 0 140 220"><use href="#icon-alice"/></svg>
+    </div>
+    <div class="final reveal">
+      <p class="final__pre">Te esperamos&hellip;</p>
+      <p class="final__name">Nicole Marissa</p>
+      <p class="final__sub">Mis XV Años</p>
+      <div class="final__ornament" aria-hidden="true"><svg viewBox="0 0 240 40"><use href="#icon-flourish"/></svg></div>
+      <p class="final__place">El Alto, Septiembre de 2026</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= AUDIO ================= -->
+<audio id="bgMusic" loop preload="none">
+  <source src="assets/audio/music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ================= SPRITE SVG DE ICONOS ================= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+
+  <symbol id="icon-heart" viewBox="0 0 40 36">
+    <path d="M20 34 C4 24 0 14 0 8 C0 2 5 -1 10 1.5 C14 3 18 7 20 11 C22 7 26 3 30 1.5 C35 -1 40 2 40 8 C40 14 36 24 20 34 Z"/>
+  </symbol>
+
+  <symbol id="icon-card" viewBox="0 0 60 84">
+    <rect x="1" y="1" width="58" height="82" rx="6" fill="none" stroke="currentColor" stroke-width="2"/>
+    <use href="#icon-heart" width="16" height="14.4" x="8" y="8"/>
+    <use href="#icon-heart" width="16" height="14.4" x="36" y="62" transform="rotate(180 44 69.2)"/>
+    <text x="9" y="20" font-family="Cinzel, serif" font-size="11" fill="currentColor">A</text>
+  </symbol>
+
+  <symbol id="icon-key" viewBox="0 0 60 100">
+    <circle cx="20" cy="18" r="14" fill="none" stroke="currentColor" stroke-width="3"/>
+    <circle cx="20" cy="18" r="5" fill="none" stroke="currentColor" stroke-width="2"/>
+    <line x1="20" y1="32" x2="20" y2="88" stroke="currentColor" stroke-width="3"/>
+    <line x1="20" y1="70" x2="32" y2="70" stroke="currentColor" stroke-width="3"/>
+    <line x1="20" y1="80" x2="30" y2="80" stroke="currentColor" stroke-width="3"/>
+  </symbol>
+
+  <symbol id="icon-clock" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="3"/>
+    <circle cx="50" cy="50" r="3" fill="currentColor"/>
+    <line x1="50" y1="50" x2="50" y2="22" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    <line x1="50" y1="50" x2="70" y2="58" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    <line x1="50" y1="6" x2="50" y2="12" stroke="currentColor" stroke-width="2"/>
+    <line x1="50" y1="88" x2="50" y2="94" stroke="currentColor" stroke-width="2"/>
+    <line x1="6" y1="50" x2="12" y2="50" stroke="currentColor" stroke-width="2"/>
+    <line x1="88" y1="50" x2="94" y2="50" stroke="currentColor" stroke-width="2"/>
+  </symbol>
+
+  <symbol id="icon-rose" viewBox="0 0 60 60">
+    <circle cx="30" cy="24" r="14" fill="none" stroke="currentColor" stroke-width="2"/>
+    <circle cx="30" cy="24" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="30" cy="24" r="3" fill="currentColor"/>
+    <path d="M30 38 C28 46 26 50 22 58" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M27 46 C22 46 20 44 17 46" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  </symbol>
+
+  <symbol id="icon-seal" viewBox="0 0 90 90">
+    <circle cx="45" cy="45" r="38" fill="none" stroke="currentColor" stroke-width="2"/>
+    <circle cx="45" cy="45" r="30" fill="none" stroke="currentColor" stroke-width="1"/>
+    <use href="#icon-heart" width="26" height="23.4" x="32" y="30"/>
+  </symbol>
+
+  <symbol id="icon-branch" viewBox="0 0 200 200">
+    <path d="M0 0 C40 10 60 40 70 80 C80 120 60 150 90 190" fill="none" stroke="currentColor" stroke-width="2"/>
+    <use href="#icon-rose" width="30" height="30" x="55" y="60"/>
+    <use href="#icon-rose" width="24" height="24" x="70" y="130"/>
+  </symbol>
+
+  <symbol id="icon-flourish" viewBox="0 0 240 40">
+    <path d="M0 20 C 60 20 80 4 120 4 C 160 4 180 20 240 20" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <use href="#icon-heart" width="18" height="16.2" x="111" y="10"/>
+  </symbol>
+
+  <symbol id="icon-rabbit" viewBox="0 0 120 160">
+    <ellipse cx="60" cy="120" rx="34" ry="30" />
+    <ellipse cx="60" cy="70" rx="22" ry="24" />
+    <path d="M46 52 C42 20 40 4 46 0 C52 10 54 40 54 54 Z"/>
+    <path d="M74 52 C78 20 80 4 74 0 C68 10 66 40 66 54 Z"/>
+    <circle cx="94" cy="118" r="7" fill="none" stroke="#000" stroke-width="0"/>
+  </symbol>
+
+  <symbol id="icon-alice" viewBox="0 0 140 220">
+    <path d="M70 10 C50 10 40 26 40 40 C40 52 46 58 46 58 C30 66 20 90 20 120 L20 190 C20 205 30 214 70 214 C110 214 120 205 120 190 L120 120 C120 90 110 66 94 58 C94 58 100 52 100 40 C100 26 90 10 70 10 Z"/>
+    <path d="M46 58 C30 64 14 70 8 74" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    <path d="M94 58 C110 64 126 70 132 74" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="icon-door" viewBox="0 0 100 160">
+    <path d="M10 158 L10 40 C10 18 28 4 50 4 C72 4 90 18 90 40 L90 158 Z" fill="none" stroke="currentColor" stroke-width="3"/>
+    <circle cx="68" cy="86" r="3" fill="currentColor"/>
+  </symbol>
+
+  <symbol id="icon-dress" viewBox="0 0 80 100">
+    <path d="M40 4 C34 4 30 10 30 16 C30 20 32 22 32 22 L14 96 L66 96 L48 22 C48 22 50 20 50 16 C50 10 46 4 40 4 Z" fill="none" stroke="currentColor" stroke-width="2.5"/>
+  </symbol>
+
+  <symbol id="icon-suit" viewBox="0 0 80 100">
+    <path d="M40 4 L24 14 L14 26 L24 34 L30 24 L30 96 L50 96 L50 24 L56 34 L66 26 L56 14 Z" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <path d="M40 4 L34 24 L40 40 L46 24 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+  </symbol>
+
+</defs>
+</svg>
+
+<script src="js/script.js"></script>
+</body>
+</html>
